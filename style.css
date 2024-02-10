@@ -1,0 +1,32 @@
+body {
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.quote-box {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.quote-text {
+    font-size: 18px;
+    margin: 0;
+}
+
+.color-buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
