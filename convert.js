@@ -6,9 +6,11 @@ function convert() {
     // Perform conversion
     let result;
     if (conversionType === "kgToLb") {
-        result = kilogramsToPounds(weightInput);
+        res = kilogramsToPounds(weightInput);
+        result = `${res} Pound`
     } else if (conversionType === "lbToKg") {
-        result = poundsToKilograms(weightInput);
+        res = poundsToKilograms(weightInput);
+        result = `${res} KG`
     } else {
         // Handle invalid conversion type
         alert("Invalid conversion type");
