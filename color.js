@@ -14,9 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const quoteText = document.getElementById("quote-text");
 
     // Function to display a random quote
-    function displayRandomQuote() {
+    function displayRandomQuote(text) {
         const randomIndex = Math.floor(Math.random() * fortunes.length);
         quoteText.textContent = fortunes[randomIndex];
+        if(text==='random'){
+            changeColors(color[randomIndex])
+        }
     }
 
     // Function to change colors
@@ -41,16 +44,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         
     }
-
     
-    // Initial setup
-    displayRandomQuote();
+    displayRandomQuote('random');
 
     // Event listener for color buttons
     document.getElementById("color-buttons").addEventListener("click", function(event) {
         if (event.target.tagName === "BUTTON") {
             changeColors(event.target.textContent.toLowerCase());
-            displayRandomQuote();
+            displayRandomQuote('button');
         }
     });
 });
