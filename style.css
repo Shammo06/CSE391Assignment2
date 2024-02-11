@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f0f0;
+    
     font-family: 'Arial', sans-serif;
     text-align: center;
 }
@@ -29,6 +29,7 @@ button {
     border: none;
     outline: none;
     font-size: 14px;
+    background-color: beige;
 }
 .textArea {
     width: 600px;
@@ -39,4 +40,11 @@ button {
     border-radius: 5px;
     border: solid blue;
     background-color: coral;
+}
+section{
+    margin-top: 40px;
+}
+
+button{
+    margin:10px;
 }
