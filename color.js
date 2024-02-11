@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
             quoteBox.style.borderColor = 'green';
         }
         else if(color==='red'){
-            quoteBox.style.backgroundColor ='#93c5fd';
+            quoteBox.style.backgroundColor ='#bfdbfe';
             quoteBox.style.borderColor = 'blue';
         }
         else if(color==='blue'){
