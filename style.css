@@ -34,3 +34,9 @@ button {
     width: 600px;
     height: 300px;
 }
+
+.magic-box{
+    border-radius: 5px;
+    border: solid blue;
+    background-color: coral;
+}
