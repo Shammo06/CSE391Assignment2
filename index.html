@@ -45,8 +45,82 @@
     </div>
    </section>
 
+   <section>
+    <div class="">
+        <h1>Magic Box</h1>
+    <textarea class="textArea" id="textArea" placeholder="Enter text here..."></textarea>
+    <br>
+    <button onclick="clearAll()">Clear All</button>
+    <button onclick="capitalizeText()">Capitalize</button>
+    <button onclick="sortLines()">Sort</button>
+    <button onclick="reverseLines()">Reverse</button>
+    <button onclick="stripBlankLines()">Strip Blank</button>
+    <button onclick="addNumbers()">Add Numbers</button>
+    <button onclick="shuffleLines()">Shuffle</button>
+    </div>
+   </section>
+
     <script src="color.js"></script>
     <script src="convert.js"></script>
     <script src="number.js"></script>
+
+    <script>
+        function clearAll() {
+            document.getElementById("textArea").value = "";
+        }
+
+        function capitalizeText() {
+            const textArea = document.getElementById("textArea");
+            const currentText = textArea.value;
+
+            if (currentText === "") {
+                return; // No need to proceed if there's no text
+            }
+
+            // Toggle between upper and lower case
+            const newText = currentText.toUpperCase() === currentText ? currentText.toLowerCase() : currentText.toUpperCase();
+
+            textArea.value = newText;
+        }
+
+        function sortLines() {
+            const textArea = document.getElementById("textArea");
+            const lines = textArea.value.split('\n').filter(line => line.trim() !== '');
+
+            const sortedLines = lines.sort();
+            textArea.value = sortedLines.join('\n');
+        }
+
+        function reverseLines() {
+            const textArea = document.getElementById("textArea");
+            const lines = textArea.value.split('\n').filter(line => line.trim() !== '');
+
+            const reversedLines = lines.reverse();
+            textArea.value = reversedLines.join('\n');
+        }
+
+        function stripBlankLines() {
+            const textArea = document.getElementById("textArea");
+            const lines = textArea.value.split('\n').filter(line => line.trim() !== '');
+
+            textArea.value = lines.join('\n');
+        }
+
+        function addNumbers() {
+            const textArea = document.getElementById("textArea");
+            const lines = textArea.value.split('\n').filter(line => line.trim() !== '');
+
+            const numberedLines = lines.map((line, index) => `${index + 1}. ${line}`);
+            textArea.value = numberedLines.join('\n');
+        }
+
+        function shuffleLines() {
+            const textArea = document.getElementById("textArea");
+            const lines = textArea.value.split('\n').filter(line => line.trim() !== '');
+
+            const shuffledLines = lines.sort(() => Math.random() - 0.5);
+            textArea.value = shuffledLines.join('\n');
+        }
+    </script>
 </body>
 </html>

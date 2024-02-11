@@ -30,3 +30,7 @@ button {
     outline: none;
     font-size: 14px;
 }
+.textArea {
+    width: 600px;
+    height: 300px;
+}
