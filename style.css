@@ -48,3 +48,10 @@ section{
 button{
     margin:10px;
 }
+
+.number{
+    border-radius: 5px;
+    border: solid blue;
+    background-color: cornflowerblue;  
+}
+
